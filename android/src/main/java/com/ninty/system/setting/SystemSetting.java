@@ -1,5 +1,6 @@
 package com.ninty.system.setting;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.NotificationManager;
 import android.bluetooth.BluetoothAdapter;
@@ -437,7 +438,8 @@ public class SystemSetting extends ReactContextBaseJavaModule implements Activit
     public void switchBluetooth() {
         switchSetting(SysSettings.BLUETOOTH);
     }
-
+    
+    @SuppressLint("MissingPermission")
     @ReactMethod
     public void switchBluetoothSilence() {
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
